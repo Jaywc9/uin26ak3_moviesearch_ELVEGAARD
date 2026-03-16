@@ -1,0 +1,286 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f0f0f;
+  color: #e2e2e2;
+  min-height: 100vh;
+}
+
+/* =====================
+   FORSIDE
+   ===================== */
+
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.page-header p {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   SØKEFELT
+   ===================== */
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.search-section label {
+  font-size: 0.85rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #e2e2e2;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-section input:focus {
+  border-color: #666;
+}
+
+.search-hint {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* =====================
+   FILMLISTE
+   ===================== */
+
+.movie-list-wrapper {
+  margin-top: 0.5rem;
+}
+
+.list-heading {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #999;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.5rem;
+}
+
+.movie-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 1.2rem;
+}
+
+/* =====================
+   FILMKORT
+   ===================== */
+
+.movie-card {
+  cursor: pointer;
+  background: #181818;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-3px);
+  border-color: #444;
+}
+
+.movie-poster {
+  margin: 0;
+  line-height: 0;
+}
+
+.movie-poster img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.no-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.movie-card-info {
+  padding: 0.55rem 0.7rem 0.65rem;
+}
+
+.movie-card-info h2 {
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.15rem;
+}
+
+.movie-card-info p {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* =====================
+   STATUS / FEIL
+   ===================== */
+
+.status-text {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.error-text {
+  color: #cc4444;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.list-empty {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* =====================
+   FILMSIDE
+   ===================== */
+
+.movie-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.breadcrumb {
+  margin-bottom: 1.8rem;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.back-btn:hover {
+  background: #1c1c1c;
+}
+
+.film-header {
+  margin-bottom: 1.8rem;
+}
+
+.film-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.film-meta {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.film-genre {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.film-innhold {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.film-plakat {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.film-plakat img {
+  width: 210px;
+  border-radius: 5px;
+  display: block;
+}
+
+.film-tekst {
+  flex: 1;
+}
+
+.film-plot {
+  color: #ccc;
+  line-height: 1.65;
+  font-size: 0.95rem;
+  margin-bottom: 1.4rem;
+}
+
+.film-fakta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.film-fakta strong {
+  color: #ddd;
+}
+
+/* =====================
+   RESPONSIVT
+   ===================== */
+
+@media (max-width: 640px) {
+  .film-innhold {
+    flex-direction: column;
+  }
+
+  .film-plakat img {
+    width: 100%;
+    max-width: 260px;
+  }
+}
