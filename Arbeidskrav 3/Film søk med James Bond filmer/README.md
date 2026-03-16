@@ -1,17 +1,4 @@
-# uin26ak3_moviesearch_LASTNAME
-
-React-applikasjon for filmsøk med OMDB API. Laget som del av arbeidskrav 3.
-
-## Komme i gang
-
-```bash
-npm install
-npm run dev
-```
-
-Husk å opprette en `.env`-fil basert på `.env.example` og legg inn API-nøkkelen din fra OMDB.
-
-## Teknologier
+## Det som blir brukt
 
 - React 18 + Vite
 - React Router v6
