@@ -37,9 +37,7 @@ function MoviePage() {
 
   if (laster) {
     return (
-      <main className="movie-page">
-        <p className="status-text">Henter film...</p>
-      </main>
+      <main className="movie-page"></main>
     )
   }
 
@@ -47,16 +45,13 @@ function MoviePage() {
     return (
       <main className="movie-page">
         <p className="error-text">Fant ikke filmen.</p>
-        <button className="back-btn" onClick={() => navigate('/')}>Tilbake til forsiden</button>
       </main>
     )
   }
 
   return (
     <main className="movie-page">
-      <nav className="breadcrumb">
-        <button className="back-btn" onClick={() => navigate('/')}>Tilbake</button>
-      </nav>
+      <nav className="breadcrumb"></nav>
 
       <article className="film-detaljer">
         <header className="film-header">

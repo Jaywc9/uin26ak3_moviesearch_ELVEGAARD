@@ -53,14 +53,11 @@ function Home() {
   return (
     <main className="home-page">
       <header className="page-header">
-        <h1>Filmsøk</h1>
-        <p>Søk blant tusenvis av filmer fra OMDB-databasen</p>
+        <h1>Søk</h1>
+        <p>Søk blant ti James Bond filmer fra OMDB-databasen</p>
       </header>
 
       <SearchBar value={query} onChange={setQuery} />
-
-      {loading && <p className="status-text">Søker...</p>}
-      {error && <p className="error-text">{error}</p>}
 
       {viserSok ? (
         <MovieList

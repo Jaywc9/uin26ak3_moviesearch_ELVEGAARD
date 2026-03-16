@@ -7,12 +7,9 @@ function SearchBar({ value, onChange }) {
         type="text"
         value={value}
         onChange={e => onChange(e.target.value)}
-        placeholder="Skriv minst 3 tegn for å søke..."
+        placeholder="Skriv minst 3 tegn"
         autoComplete="off"
       />
-      {value.length > 0 && value.length < 3 && (
-        <p className="search-hint">Fortsett å skrive...</p>
-      )}
     </section>
   )
 }
